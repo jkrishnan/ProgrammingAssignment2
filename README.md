@@ -28,18 +28,17 @@ The first function, 'makeCacheMatrix' This function creates a special "matrix" o
 4) getInv gets the inverse of the matrix it uses <<- assignment operator so that these internal variables are not exposed to the outside environment.
 
 
-This secon function 'cacheSolve' computes the inverse of the special matrix returned by `makeCacheMatrix` above. If the inverse has already been calculated (and the matrix has not changed),
+This second function 'cacheSolve' computes the inverse of the special matrix returned by `makeCacheMatrix` above. If the inverse has already been calculated (and the matrix has not changed),
 then `cacheSolve` should retrieve the inverse from the cache
 
 
-###For this assignment, assume that the matrix supplied is always invertible. 
+For this assignment, assume that the matrix supplied is always invertible. 
 Test generate a test matrix 3 columns 3 rows, sample provided below:
 test <- matrix(c(3,3,5,4,5,3,5,6,7),nrow=3,ncol=3)
-generate the makeCacheMatrix object with this matrix
+Generate the makeCacheMatrix object with this matrix
 testCached <- makeCacheMatrix(test)
-from now on calculate or retrieve calculated inversion using the cacheSolve function
+From now on calculate or retrieve calculated inversion using the cacheSolve function
 testInv <- cacheSolve(testCached)
-
 
 
 In order to complete this assignment, you must do the following:
